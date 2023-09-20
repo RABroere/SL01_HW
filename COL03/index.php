@@ -2,6 +2,21 @@
 //extern bestand voor alle gebruikte functies
 require "functions.php";
 
+//huiswerkopdracht
+//multidimensional array met namen en extra info
+$teams = ["Robin" => ['Hobby' => "Mariokart", 'Leeftijd' => "18", 'Woonplaats' => "Harderwijk" ],
+                "Bram" => ['Hobby'=> "Gamen", 'Leeftijd' => "18"],
+                "Pascal" => ['Hobby' => "Programeren", 'Leeftijd' => "21", 'Woonplaats' => "Almere", 'Haarkleur' => "blond"]
+    ];
+/**array van welke personen er informatie op het scherm gezet wordt
+ * [0,2] zijn de indexen dus index 0 (Robin) en 2 (Pascal) wordt op het scherm gezet
+*/
+$info = [0,1];
+//zie functions.php voor de arrayInfo function
+
+
+
+
 //changecolor functie veranderd de achtergrondkleur op basis van heet uur van de dag
 //changeColor();
 //

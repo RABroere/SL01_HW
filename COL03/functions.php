@@ -1,4 +1,30 @@
 <?php
+
+//arrayInfo neemt een $array en $infoArray en laat de keys van de $array zien en afhankelijk van $infoArray ook extra informatie
+function arrayInfo(array $array, array $infoArray ){
+    //slaat een index op
+    $i = 0;
+    //loopt door de $array en zet de namen (keys) op het scherm
+    foreach ($array as $key => $info){
+        echo "<hr><b>" . $key. "</b>    <br>";
+        //loopt door $info en zet het in $thing. dit zijn de indivuele informatie items
+        foreach ($info as $thing){
+            //checkt of deze $key extra informatie moet weergeven door de index $i te vergelijken met $infoArray
+            if (in_array($i, $infoArray)){
+                //als de index van de $key overeenkomt met een value in $infoArray worden de items $thing op het scherm gezet
+                echo $thing . " ";
+            }
+            else{
+                //als de index van de $key niet overeenkomt gebeurd en niks en gaat de loop verder.
+                break;
+            }
+        }
+        //index +1
+        $i++;
+    }
+}
+
+
 /**
  * Schrijf een functie waarbij de kleur van de pagina
  * bepaald wordt op basis van tijd
@@ -26,7 +52,7 @@ function changeColor(){
                 body{background-color: $color}
             </style>
         ";
-    echo "<div>Hello ADSD <br></div>";
+    echo "<div><hr>Hello ADSD <br></div>";
 }
 
 
