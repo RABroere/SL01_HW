@@ -11,7 +11,7 @@ $teams = ["Robin" => ['Hobby' => "Mariokart", 'Leeftijd' => "18", 'Woonplaats' =
 /**array van welke personen er informatie op het scherm gezet wordt
  * [0,2] zijn de indexen dus index 0 (Robin) en 2 (Pascal) wordt op het scherm gezet
 */
-$info = [0,1];
+$info = [0,2];
 //zie functions.php voor de arrayInfo function
 
 

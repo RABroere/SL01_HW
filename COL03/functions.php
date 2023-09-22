@@ -1,25 +1,23 @@
 <?php
 
-//arrayInfo neemt een $array en $infoArray en laat de keys van de $array zien en afhankelijk van $infoArray ook extra informatie
-function arrayInfo(array $array, array $infoArray ){
+//arrayInfo neemt een $array en $index en laat de keys($naam) van de $array zien en afhankelijk van $infoArray ook extra informatie
+function arrayInfo(array $array, array $index ){
     //slaat een index op
     $i = 0;
     //loopt door de $array en zet de namen (keys) op het scherm
-    foreach ($array as $key => $info){
-        echo "<hr><b>" . $key. "</b>    <br>";
-        //loopt door $info en zet het in $thing. dit zijn de indivuele informatie items
-        foreach ($info as $thing){
-            //checkt of deze $key extra informatie moet weergeven door de index $i te vergelijken met $infoArray
-            if (in_array($i, $infoArray)){
-                //als de index van de $key overeenkomt met een value in $infoArray worden de items $thing op het scherm gezet
+    foreach ($array as $naam => $info){
+        echo "<hr><b>" . $naam. "</b>    <br>";
+        //de index $i wordt vergeleken met de array $index
+        if (in_array($i, $index)){
+            //als de index $i in de array $index zit wordt de detail informatie weergegeven
+            foreach ($info as $thing){
                 echo $thing . " ";
             }
-            else{
-                //als de index van de $key niet overeenkomt gebeurd en niks en gaat de loop verder.
-                break;
-            }
+            //als de index $i niet in de array $index zit begint de loop overnieuw;
+        }else{
+            $i++;
+            continue;
         }
-        //index +1
         $i++;
     }
 }
