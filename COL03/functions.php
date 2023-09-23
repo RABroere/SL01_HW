@@ -1,4 +1,24 @@
 <?php
+require "views/variables.php";
+function displayArray(array $members, array $details){
+    foreach ($members as $index => $member){
+        echo "member is, <a href='views/details.view.php?index=$index'>$member</a>  index is $index"  . "<br>";
+    }
+}
+
+function displayDetails(int $persoonIndex, array $details) {
+    foreach ($details as $rowIndex => $detailInfo){
+           if (key($detailInfo) == $persoonIndex){
+               echo $detailInfo[$persoonIndex] . "<br>" ;
+           }
+    }
+}
+
+
+
+
+
+
 
 //arrayInfo neemt een $array en $index en laat de keys($naam) van de $array zien en afhankelijk van $infoArray ook extra informatie
 function arrayInfo(array $array, array $index ){

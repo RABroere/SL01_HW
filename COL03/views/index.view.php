@@ -11,6 +11,8 @@
             <div class="offset-2 col-8">
                 <h1>Hello, ADSD!</h1>
                 <?php
+                        require "functions.php";
+                        displayArray($teamMembers, $detailsS);
                         arrayInfo($teams, $info);
                         echo changeColor();
                         varInfo($yesNo);
