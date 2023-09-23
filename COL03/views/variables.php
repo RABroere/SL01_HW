@@ -1,10 +1,11 @@
 <?php
+//alle teammembers met index
 $teamMembers = [
     "1" => "Robin",
     "2" => "Pascal",
     "3" => "Bram"
 ];
-
+//details Robin: 18 , Harderwijk, Backend; Pascal: Almere, Front-end; Bram: 18, Fullstack, bus
 $detailsS = [
     1 => [1=> "18"],
     2 => [1=> "harderwijk"],
@@ -16,24 +17,18 @@ $detailsS = [
     8 => [3=> "bus"]
 ];
 
-//$detailsR = [
-//    1 => ["Age"=> "18"],
-//    1 => ["Hometown"=> "harderwijk"],
-//    1 => ["Preference"=> "back-end"],
-//    2 => ["Hometown"=> "almere"],
-//    2 => ["Preference"=> "front-end"],
-//    3 => ["Age"=> "18"],
-//    3 => ["preference"=> "fullstack"],
-//    3 => ["Transport"=> "bus"]
-//];
-
+//multidimensional array met namen en extra info
 $teams = ["Robin" => ['Hobby' => "Mariokart", 'Leeftijd' => "18", 'Woonplaats' => "Harderwijk" ],
     "Bram" => ['Hobby'=> "Gamen", 'Leeftijd' => "18"],
     "Pascal" => ['Hobby' => "Programeren", 'Leeftijd' => "21", 'Woonplaats' => "Almere", 'Haarkleur' => "blond"]
 ];
 
+/**array van welke personen er informatie op het scherm gezet wordt
+* [0,2] zijn de indexen dus index 0 (Robin) en 2 (Pascal) wordt op het scherm gezet
+*/
 $info = [0,2];
 
+//test variables voor arrayInfo() functie
 $yesNo = true;
 $text = "Hello";
 $num = 7;

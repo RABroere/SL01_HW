@@ -12,7 +12,7 @@
                 <h1>Hello, ADSD!</h1>
                 <?php
                         require "functions.php";
-                        displayArray($teamMembers, $detailsS);
+                        displayArray($teamMembers);
                         arrayInfo($teams, $info);
                         echo changeColor();
                         varInfo($yesNo);

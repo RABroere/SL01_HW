@@ -1,11 +1,14 @@
 <?php
+//require zodat alle functies de variables kunnen aanspreken
 require "views/variables.php";
-function displayArray(array $members, array $details){
+
+//displayArray() laat alle members met link naar details pagina + key info over welk persoon er geklikt is
+function displayArray(array $members){
     foreach ($members as $index => $member){
         echo "member is, <a href='views/details.view.php?index=$index'>$member</a>  index is $index"  . "<br>";
     }
 }
-
+//displayDetails is de functie die wordt gebruikt om de details weer te geven van de index die wordt meegestuurd van displayArray
 function displayDetails(int $persoonIndex, array $details) {
     foreach ($details as $rowIndex => $detailInfo){
            if (key($detailInfo) == $persoonIndex){
@@ -13,12 +16,6 @@ function displayDetails(int $persoonIndex, array $details) {
            }
     }
 }
-
-
-
-
-
-
 
 //arrayInfo neemt een $array en $index en laat de keys($naam) van de $array zien en afhankelijk van $infoArray ook extra informatie
 function arrayInfo(array $array, array $index ){
@@ -72,7 +69,6 @@ function changeColor(){
         ";
     echo "<div><hr>Hello ADSD <br></div>";
 }
-
 
 /**
  * Schrijf een functie waarbij de waarde van een variable getoond wordt, hoeveel het
